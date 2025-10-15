@@ -1,0 +1,378 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f8f9fb;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1, h2, h3, h4 {
+  color: #003366;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==============================
+   HEADER
+============================== */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background: #003366;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #003366;
+}
+
+.logo span {
+  color: #f5b800;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #003366;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header.scrolled .nav-link {
+  color: #fff;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f5b800;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #003366;
+  cursor: pointer;
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+.hero {
+  background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), url('https://cdn.pixabay.com/photo/2021/06/10/09/32/teamwork-6326671_1280.jpg') no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin: 10px 0 20px;
+}
+
+.highlight {
+  color: #f5b800;
+}
+
+.hero-text {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: #f5b800;
+  color: #003366;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #003366;
+  color: #fff;
+}
+
+/* ==============================
+   ABOUT SECTION
+============================== */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: #f5b800;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.languages span {
+  display: inline-block;
+  background: #003366;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+.quote {
+  font-style: italic;
+  margin-top: 15px;
+  border-left: 3px solid #f5b800;
+  padding-left: 10px;
+  color: #003366;
+}
+
+/* ==============================
+   LEADERSHIP SECTION
+============================== */
+.leadership-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.leadership-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.leadership-card:hover {
+  transform: translateY(-5px);
+}
+
+.leadership-card h3 {
+  color: #003366;
+}
+
+.leadership-card p {
+  color: #555;
+}
+
+/* ==============================
+   CONTACT SECTION
+============================== */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  background: #003366;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contact-text h4 {
+  color: #003366;
+  font-weight: 600;
+}
+
+.contact-text a {
+  color: #f5b800;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 12px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.9rem;
+}
+
+footer h3 {
+  color: #f5b800;
+}
+
+/* ==============================
+   BACK TO TOP BUTTON
+============================== */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  background: #f5b800;
+  color: #003366;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: none;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  display: block;
+}
+
+.back-to-top:hover {
+  background: #003366;
+  color: #fff;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
